@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Graphite</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <button class="icon-btn" id="menuBtn" aria-label="메뉴">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16M4 12h10M4 17h16"/></svg>
+    </button>
+    <div class="brand"><b>GRAPHITE</b><span>공학용 계산기</span></div>
+    <div class="status">
+      <span class="pill" id="stShift" hidden>2nd</span>
+      <span class="pill" id="stHyp" hidden>HYP</span>
+      <span class="pill" id="stMem" hidden>M</span>
+      <span class="pill" id="stFmt">NORM</span>
+      <span class="pill" id="stAngle">DEG</span>
+    </div>
+  </header>
+  <nav class="modes" id="modes"></nav>
+  <main id="views">
+    <section class="view" id="v-calc">
+      <div class="display" id="display">
+        <div class="prev" id="prevLine"></div>
+        <div class="expr" id="expr"></div>
+        <div class="result" id="result"></div>
+        <div class="hints" id="hints"></div>
+      </div>
+      <div class="keypad" id="keypad"></div>
+    </section>
+    <section class="view" id="v-graph"></section>
+    <section class="view" id="v-solve"></section>
+    <section class="view" id="v-calculus"></section>
+    <section class="view" id="v-matrix"></section>
+    <section class="view" id="v-vector"></section>
+    <section class="view" id="v-stats"></section>
+    <section class="view" id="v-dist"></section>
+    <section class="view" id="v-prog"></section>
+    <section class="view" id="v-units"></section>
+    <section class="view" id="v-const"></section>
+    <section class="view" id="v-eng"></section>
+    <section class="view" id="v-history"></section>
+    <section class="view" id="v-settings"></section>
+  </main>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet"><div class="grab"></div><h3 id="sheetTitle"></h3><div class="body" id="sheetBody"></div></div>
+<div class="kb" id="kb"></div>
+<div class="toast" id="toast"></div>
+<script src="js/engine.js"></script>
+<script src="js/app.js"></script>
+<script src="js/graph.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/tools2.js"></script>
+<script>App.start();</script>
+</body>
+</html>
